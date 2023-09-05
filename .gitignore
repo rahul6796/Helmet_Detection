@@ -161,3 +161,4 @@ cython_debug/
 helemt_detection.egg-info/*
 data/*
 logs/*
+artifacts/*

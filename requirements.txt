@@ -22,4 +22,6 @@ dill==0.3.5.1
 utils
 torch>=1.7.0
 torchvision>=0.8.1
+python-box==6.0.2
+ensure==1.0.2
 -e .
