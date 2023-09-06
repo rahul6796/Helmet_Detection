@@ -6,3 +6,12 @@ data_ingestion:
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
 
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_transform_train_dir:  artifacts/data_ingestion/Train
+  data_transform_test_dir: artifacts/data_ingestion/Test
+  data_transform_train_file_name: artifacts/data_transformation/train.pkl
+  data_transform_test_file_name: artifacts/data_transformation/test.pkl
+  data_transform_train_split: artifacts/data_ingestion/train
+  data_transform_test_split: artifacts/data_ingestion/test

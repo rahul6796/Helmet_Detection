@@ -1,6 +1,6 @@
 from helmet.constants import CONFIG_FILE_PATH
 from helmet.utils.common import read_yaml, create_directory
-from helmet.entity import DataIngestionConfig
+from helmet.entity import DataIngestionConfig, DataTransformationConfig
 
 
 class ConfigurationManager:
@@ -22,5 +22,20 @@ class ConfigurationManager:
         )
 
         return data_ingestion
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transform
+        create_directory([config.root_dir])
+
+        data_transform_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_transform_train_dir=config.data_transform_train_dir,
+            data_transform_test_dir=config.data_transform_test_dir,
+            data_transform_train_file_name=config.data_transform_train_file_name,
+            data_transform_test_file_name=config.data_transform_test_file_name,
+            data_transform_train_split = config.data_transform_train_split,
+            data_transform_test_split =config.data_transform_test_split
+        )
+        return data_transform_config
 
 

@@ -10,3 +10,15 @@ class DataIngestionConfig:
     unzip_dir: Path
 
 
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_transform_train_dir: Path
+    data_transform_test_dir: Path
+    data_transform_train_file_name: Path
+    data_transform_test_file_name: Path
+    data_transform_train_split: Path
+    data_transform_test_split: Path
+
+
+

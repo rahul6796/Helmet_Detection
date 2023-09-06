@@ -10,8 +10,8 @@ from helmet.exception import HelmetException
 
 class DataIngestion:
 
-    def __init(self,
-               config: DataIngestionConfig):
+    def __init__(self,
+                 config: DataIngestionConfig):
         self.config = config
 
     def download_file(self):
@@ -47,4 +47,3 @@ class DataIngestion:
         except Exception as ex:
             logger.error(f"failed to extract_zip_file :: {ex}")
             raise HelmetException(ex, sys) from ex
-
